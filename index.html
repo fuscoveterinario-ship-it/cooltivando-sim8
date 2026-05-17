@@ -1418,6 +1418,7 @@ ck="hm('m-logs')">Fechar</button>
 </div>
 </div>
 <script>
+
 // ===SALVAR AGROINDUSTRIA===
 async function salvarAgroindustria() {
   var selects = document.querySelectorAll('#m-agro select');
@@ -2704,13 +2705,11 @@ function baixarPDF(nomeProcesso) { nomeProcesso = nomeProcesso || processoAtual 
   htmlPDF += '</div>';
   htmlPDF += '<div class="watermark">Documento gerado pelo sistema Cooltivando SIM - ' + codigo + '</div>';
   htmlPDF += '<br><div style="text-align:center"><button onclick="window.print()" style="padding:10px 24px;background:#2d7a50;color:white;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">Imprimir / Salvar PDF</button></div>';
-  htmlPDF += '</body></html>';
-</script>
-<!-- MODAL RASTRO -->
+  htmlPDF += '<!-- MODAL RASTRO -->
 <div class="mo" id="m-rastro" onclick="cm(event,this)">
   <div class="mb" style="width:460px">
     <div class="mh">
-      <h3>&#128737; Registro efetuado</h3>
+      <h3>&#10003; Registro efetuado</h3>
       <button class="mc" onclick="hm('m-rastro')">x</button>
     </div>
     <div style="padding:20px">
@@ -2721,7 +2720,7 @@ function baixarPDF(nomeProcesso) { nomeProcesso = nomeProcesso || processoAtual 
         <div style="font-size:11px;color:var(--k5);margin-top:4px" id="mrd">-</div>
       </div>
       <div style="background:var(--g0);border:1px solid var(--g2);border-radius:8px;padding:10px 14px;font-size:12px;color:var(--g7)">
-        &#128737; Registro salvo com rastreabilidade completa no sistema.
+        &#128737; Registro salvo com rastreabilidade no sistema.
       </div>
     </div>
     <div class="fact">
@@ -2729,27 +2728,10 @@ function baixarPDF(nomeProcesso) { nomeProcesso = nomeProcesso || processoAtual 
     </div>
   </div>
 </div>
-</body></html>';
+';
 }
 </script>
-<!-- MODAL RECUPERACAO DE SENHA -->
-<div id="m-recuperar" style="position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;display:none;align-items:center;justify-content:center">
-  <div style="background:#fff;border-radius:14px;width:400px;max-width:90vw;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.3)">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
-      <h3 style="font-family:Nunito,sans-serif;font-size:16px;font-weight:800">🔐 Recuperar senha</h3>
-      <button onclick="fecharRecuperar()" style="width:28px;height:28px;border-radius:50%;border:none;background:#f3f4f6;font-size:14px;cursor:pointer">x</button>
-    </div>
-    <p style="font-size:13px;color:#6b7280;margin-bottom:16px">Digite seu e-mail. Enviaremos um link para redefinir sua senha.</p>
-    <label style="display:block;font-size:11px;font-weight:700;color:#374151;margin-bottom:5px;text-transform:uppercase">E-mail</label>
-    <input id="rec-email" type="email" placeholder="seu@email.com" style="width:100%;padding:10px 13px;border:1.5px solid #d1d5db;border-radius:8px;font-size:13px;outline:none;margin-bottom:14px">
-    <div id="rec-msg" style="display:none;padding:10px;border-radius:8px;font-size:12px;text-align:center;margin-bottom:14px"></div>
-    <div style="display:flex;gap:10px;justify-content:flex-end">
-      <button onclick="fecharRecuperar()" style="padding:8px 16px;border-radius:7px;border:1.5px solid #d1d5db;background:#fff;font-size:12px;font-weight:700;cursor:pointer">Cancelar</button>
-      <button onclick="enviarRecuperacao()" style="padding:8px 16px;border-radius:7px;border:none;background:#2d7a50;color:#fff;font-size:12px;font-weight:700;cursor:pointer">Enviar link</button>
-    </div>
-  </div>
-</div>
-
+</script>
 
 <!-- MODAL RASTRO -->
 <div class="mo" id="m-rastro" onclick="cm(event,this)">
@@ -2774,15 +2756,11 @@ function baixarPDF(nomeProcesso) { nomeProcesso = nomeProcesso || processoAtual 
     </div>
   </div>
 </div>
-</body>
-</html>
-
-
 <!-- MODAL RASTRO -->
 <div class="mo" id="m-rastro" onclick="cm(event,this)">
   <div class="mb" style="width:460px">
     <div class="mh">
-      <h3>&#128737; Registro efetuado</h3>
+      <h3>&#10003; Registro efetuado</h3>
       <button class="mc" onclick="hm('m-rastro')">x</button>
     </div>
     <div style="padding:20px">
@@ -2793,7 +2771,32 @@ function baixarPDF(nomeProcesso) { nomeProcesso = nomeProcesso || processoAtual 
         <div style="font-size:11px;color:var(--k5);margin-top:4px" id="mrd">-</div>
       </div>
       <div style="background:var(--g0);border:1px solid var(--g2);border-radius:8px;padding:10px 14px;font-size:12px;color:var(--g7)">
-        &#128737; Registro salvo com rastreabilidade completa no sistema.
+        &#128737; Registro salvo com rastreabilidade no sistema.
+      </div>
+    </div>
+    <div class="fact">
+      <button class="btn bg" onclick="hm('m-rastro')">OK</button>
+    </div>
+  </div>
+</div>
+';
+
+<!-- MODAL RASTRO -->
+<div class="mo" id="m-rastro" onclick="cm(event,this)">
+  <div class="mb" style="width:460px">
+    <div class="mh">
+      <h3>&#10003; Registro efetuado</h3>
+      <button class="mc" onclick="hm('m-rastro')">x</button>
+    </div>
+    <div style="padding:20px">
+      <div style="background:var(--g0);border:2px solid var(--g4);border-radius:10px;padding:16px;text-align:center;margin-bottom:16px">
+        <div style="font-size:32px;margin-bottom:8px">&#10003;</div>
+        <div style="font-family:Nunito,sans-serif;font-size:16px;font-weight:800;color:var(--g7)" id="mrt">Operacao realizada</div>
+        <div style="font-size:12px;color:var(--k5);margin-top:6px" id="mrf">-</div>
+        <div style="font-size:11px;color:var(--k5);margin-top:4px" id="mrd">-</div>
+      </div>
+      <div style="background:var(--g0);border:1px solid var(--g2);border-radius:8px;padding:10px 14px;font-size:12px;color:var(--g7)">
+        &#128737; Registro salvo com rastreabilidade no sistema.
       </div>
     </div>
     <div class="fact">
